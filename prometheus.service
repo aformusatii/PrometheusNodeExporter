@@ -1,0 +1,9 @@
+[Unit]
+Description=Prometheus Node Exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/prometheus/node_exporter --collector.processes --collector.systemd
+
+[Install]
+WantedBy=multi-user.target
